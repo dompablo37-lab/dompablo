@@ -41,68 +41,10 @@ body {
 main {
   isolation: isolate;
   background-image:
-    linear-gradient(rgba(9, 10, 10, 0.58), rgba(9, 10, 10, 0.58)),
+    linear-gradient(rgba(9, 10, 10, 0.22), rgba(9, 10, 10, 0.22)),
     url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/C3164T01%20Fake-YOfUm71tgMV1xYpAy9KXVtRNOR83xs.png');
-  background-position: center;
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-.page-glow,
-.page-ring {
-  pointer-events: none;
-  position: absolute;
-  z-index: -1;
-}
-
-.page-glow-left {
-  left: -9rem;
-  bottom: -1rem;
-  width: 20rem;
-  height: 30rem;
-  opacity: 0.38;
-  background: linear-gradient(115deg, transparent 15%, rgba(108, 141, 58, 0.48) 48%, transparent 69%);
-  filter: blur(28px);
-  transform: rotate(-19deg);
-}
-
-.page-glow-bottom {
-  right: -5rem;
-  bottom: -7rem;
-  width: 28rem;
-  height: 17rem;
-  opacity: 0.42;
-  background: radial-gradient(ellipse, rgba(247, 245, 214, 0.92), transparent 68%);
-  filter: blur(10px);
-}
-
-.page-ring {
-  border: 1px solid rgba(255, 255, 255, 0.36);
-  border-radius: 999px;
-}
-
-.page-ring-one {
-  top: -22rem;
-  left: -9rem;
-  width: 37rem;
-  height: 52rem;
-  transform: rotate(13deg);
-}
-
-.page-ring-two {
-  top: -19rem;
-  right: -15rem;
-  width: 45rem;
-  height: 55rem;
-  transform: rotate(-15deg);
-}
-
-@media (max-width: 640px) {
-  .page-ring-one {
-    left: -18rem;
-  }
-
-  .page-ring-two {
-    right: -28rem;
-  }
 }

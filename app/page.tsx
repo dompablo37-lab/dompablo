@@ -38,11 +38,6 @@ const links = [
 export default function Page() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 py-10">
-      <div className="page-glow page-glow-left" aria-hidden="true" />
-      <div className="page-glow page-glow-bottom" aria-hidden="true" />
-      <div className="page-ring page-ring-one" aria-hidden="true" />
-      <div className="page-ring page-ring-two" aria-hidden="true" />
-
       <div className="relative z-10 flex w-full max-w-[390px] flex-col items-center text-center">
         <div className="mb-5 flex h-[142px] w-[142px] items-center justify-center rounded-full border border-white/75 bg-white/30 p-1.5 shadow-[0_4px_16px_rgba(74,73,47,0.2)] backdrop-blur-sm">
           <img
