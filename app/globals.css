@@ -40,8 +40,12 @@ body {
 
 main {
   isolation: isolate;
-  background:
-    radial-gradient(ellipse at center, rgba(250, 249, 218, 0.6) 0%, rgba(232, 230, 189, 0.74) 52%, rgba(213, 215, 162, 0.92) 100%);
+  background-image:
+    linear-gradient(rgba(9, 10, 10, 0.58), rgba(9, 10, 10, 0.58)),
+    url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/C3164T01%20Fake-YOfUm71tgMV1xYpAy9KXVtRNOR83xs.png');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .page-glow,
