@@ -39,7 +39,7 @@ export default function Page() {
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 py-10">
       <div className="relative z-10 flex w-full max-w-[390px] flex-col items-center text-center">
-        <div className="mb-3 flex h-[320px] w-[320px] items-center justify-center overflow-hidden rounded-full">
+        <div className="mb-0 flex h-[320px] w-[320px] items-center justify-center overflow-hidden rounded-full">
           <img
             src="/dom-pablo-logo.png"
             alt="Logotipo Dom Pablo Barberia"
@@ -47,8 +47,8 @@ export default function Page() {
           />
         </div>
 
-        <h1 className="font-sans text-[25px] font-bold tracking-[-0.04em] text-[#111111]">
-          Seu nome aqui
+        <h1 className="font-serif text-[27px] font-semibold tracking-[-0.03em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.45)]">
+          Dom Pablo Baveria
         </h1>
         <p className="mt-1 text-[12px] font-semibold text-[#33352c]">
           Sua profissão ou registro
