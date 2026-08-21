@@ -47,8 +47,8 @@ export default function Page() {
           />
         </div>
 
-        <h1 className="-mt-16 font-serif text-[26px] font-extrabold uppercase tracking-[0.14em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)]">
-          Dom Pablo Atelier
+        <h1 className="-mt-16 font-serif text-[26px] font-black uppercase tracking-[0.14em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)]">
+          Dom Pabllo Barbearia
         </h1>
         <p className="mt-1 text-[12px] font-semibold text-[#33352c]">
           Sua profissão ou registro
