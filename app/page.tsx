@@ -47,7 +47,7 @@ export default function Page() {
           />
         </div>
 
-        <h1 className="-mt-4 font-serif text-[25px] font-bold italic uppercase tracking-[0.08em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)]">
+        <h1 className="-mt-8 font-serif text-[25px] font-bold italic uppercase tracking-[0.08em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)]">
           Dom Pablo Barbearia
         </h1>
         <p className="mt-1 text-[12px] font-semibold text-[#33352c]">
