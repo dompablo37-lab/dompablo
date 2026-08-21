@@ -1,13 +1,7 @@
 'use client'
 
-import {
-  Facebook,
-  Instagram,
-  Link2,
-  MapPin,
-  MessageCircle,
-  Star,
-} from 'lucide-react'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { Link2, MapPin, MessageCircle, Star } from 'lucide-react'
 
 const links = [
   {
@@ -57,14 +51,14 @@ export default function Page() {
             aria-label="Facebook"
             className="inline-flex rounded-full p-1.5 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
           >
-            <Facebook size={23} strokeWidth={2.4} />
+            <FaFacebookF size={21} aria-hidden="true" />
           </a>
           <a
             href="#instagram"
             aria-label="Instagram"
             className="inline-flex rounded-full p-1.5 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
           >
-            <Instagram size={23} strokeWidth={2.4} />
+            <FaInstagram size={23} aria-hidden="true" />
           </a>
         </div>
 
