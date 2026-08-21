@@ -1,7 +1,8 @@
 'use client'
 
 import {
-  AtSign,
+  Facebook,
+  Instagram,
   Link2,
   MapPin,
   MessageCircle,
@@ -50,20 +51,22 @@ export default function Page() {
         <h1 className="-mt-16 font-serif text-[26px] font-black uppercase tracking-[0.14em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)]">
           Dom Pabllo Barbearia
         </h1>
-        <p className="mt-1 text-[12px] font-semibold text-[#33352c]">
-          Sua profissão ou registro
-        </p>
-        <p className="mt-2 text-[12px] font-medium uppercase tracking-[0.32em] text-[#a79d62]">
-          Seu posicionamento
-        </p>
-
-        <a
-          href="#instagram"
-          aria-label="Instagram"
-          className="mt-3 inline-flex rounded-full p-1.5 text-[#36362d] transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
-        >
-          <AtSign size={23} strokeWidth={2.2} />
-        </a>
+        <div className="mt-4 flex items-center gap-4 text-[#36362d]">
+          <a
+            href="#facebook"
+            aria-label="Facebook"
+            className="inline-flex rounded-full p-1.5 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
+          >
+            <Facebook size={23} strokeWidth={2.4} />
+          </a>
+          <a
+            href="#instagram"
+            aria-label="Instagram"
+            className="inline-flex rounded-full p-1.5 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
+          >
+            <Instagram size={23} strokeWidth={2.4} />
+          </a>
+        </div>
 
         <nav aria-label="Links principais" className="mt-2 flex w-full flex-col gap-2.5">
           {links.map(({ label, icon: Icon, iconClass, href }) => (
