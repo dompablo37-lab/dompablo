@@ -32,9 +32,9 @@ const links = [
 
 export default function Page() {
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-5 py-10">
-      <div className="relative z-10 flex w-full max-w-[390px] flex-col items-center text-center">
-        <div className="mb-0 flex h-[320px] w-[320px] items-center justify-center overflow-hidden rounded-full">
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-8 sm:px-5 sm:py-10">
+      <div className="relative z-10 flex w-full max-w-[420px] flex-col items-center text-center">
+        <div className="mb-0 flex aspect-square w-[min(82vw,320px)] items-center justify-center overflow-hidden rounded-full">
           <img
             src="/dom-pablo-logo.png"
             alt="Logotipo Dom Pablo Barberia"
@@ -42,7 +42,7 @@ export default function Page() {
           />
         </div>
 
-        <h1 className="-mt-16 font-serif text-[26px] font-black uppercase tracking-[0.14em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)]">
+        <h1 className="-mt-12 whitespace-nowrap font-serif text-[clamp(1rem,7vw,1.625rem)] font-black uppercase tracking-[0.08em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)] sm:-mt-16 sm:tracking-[0.1em]">
           Dom Pabllo Barbearia
         </h1>
         <div className="mt-4 flex items-center gap-4 text-[#36362d]">
