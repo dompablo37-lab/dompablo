@@ -1,6 +1,5 @@
 'use client'
 
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { Link2, MapPin, MessageCircle, Star } from 'lucide-react'
 
 const links = [
@@ -51,14 +50,24 @@ export default function Page() {
             aria-label="Facebook"
             className="inline-flex rounded-full p-1.5 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
           >
-            <FaFacebookF size={21} aria-hidden="true" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/facebook/default.svg"
+              alt=""
+              aria-hidden="true"
+              className="h-[21px] w-[21px]"
+            />
           </a>
           <a
             href="#instagram"
             aria-label="Instagram"
             className="inline-flex rounded-full p-1.5 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
           >
-            <FaInstagram size={23} aria-hidden="true" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/instagram/default.svg"
+              alt=""
+              aria-hidden="true"
+              className="h-[23px] w-[23px]"
+            />
           </a>
         </div>
 
