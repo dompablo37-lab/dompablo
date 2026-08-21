@@ -1,11 +1,12 @@
 'use client'
 
-import { Link2, MapPin, MessageCircle, Star } from 'lucide-react'
+import { Link2, MapPin, Star } from 'lucide-react'
 
 const links = [
   {
     label: 'Agendar consulta de avaliação',
-    icon: MessageCircle,
+    iconSrc: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/whatsapp/default.svg',
+    iconAlt: 'WhatsApp',
     iconClass: 'text-[#21c98a]',
     href: '#agendamento',
   },
@@ -72,13 +73,19 @@ export default function Page() {
         </div>
 
         <nav aria-label="Links principais" className="mt-2 flex w-full flex-col gap-2.5">
-          {links.map(({ label, icon: Icon, iconClass, href }) => (
+          {links.map(({ label, icon: Icon, iconSrc, iconAlt, iconClass, href }) => (
             <a
               key={label}
               href={href}
-              className="group flex min-h-[56px] w-full items-center justify-center gap-3 rounded-[17px] border border-white/80 bg-white/90 px-5 text-[14px] font-bold text-[#191919] shadow-[0_4px_8px_rgba(90,89,57,0.16)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_7px_14px_rgba(90,89,57,0.2)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#36362d]"
+              className="group flex min-h-[56px] w-full items-center justify-start gap-3 rounded-[17px] border border-white/80 bg-white/90 px-5 text-left text-[14px] font-bold text-[#191919] shadow-[0_4px_8px_rgba(90,89,57,0.16)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_7px_14px_rgba(90,89,57,0.2)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#36362d]"
             >
-              <Icon className={`shrink-0 ${iconClass}`} size={24} strokeWidth={2.3} />
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center">
+                {iconSrc ? (
+                  <img src={iconSrc} alt={iconAlt} className="h-6 w-6 object-contain" />
+                ) : Icon ? (
+                  <Icon className={iconClass} size={24} strokeWidth={2.3} />
+                ) : null}
+              </span>
               <span>{label}</span>
             </a>
           ))}
