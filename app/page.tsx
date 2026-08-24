@@ -1,32 +1,31 @@
 'use client'
 
-import { Link2, MapPinned, Star } from 'lucide-react'
+import { Link2 } from 'lucide-react'
 
 const links = [
   {
-    label: 'Agende sua avaliação',
-    iconSrc: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/whatsapp/default.svg',
+    label: 'Agendar meu horário',
+    iconSrc: '/images/wpp.png',
     iconAlt: 'WhatsApp',
-    iconClass: 'text-[#21c98a]',
     href: '#agendamento',
   },
   {
-    label: 'Encontre a barbearia',
-    icon: MapPinned,
-    iconClass: 'text-[#ed4545]',
+    label: "Dom's Club",
+    icon: Link2,
+    iconClass: 'text-[#36362d]',
+    href: '#doms-club',
+  },
+  {
+    label: 'Localização Dom Pablo',
+    iconSrc: '/images/loc.png',
+    iconAlt: 'Localização',
     href: '#localizacao',
   },
   {
-    label: 'Avalie sua experiência',
-    icon: Star,
-    iconClass: 'text-[#e5a528]',
+    label: 'Avalie sua Experiência',
+    iconSrc: '/images/av.png',
+    iconAlt: 'Avaliação',
     href: '#avaliacoes',
-  },
-  {
-    label: 'Conheça meu projeto',
-    icon: Link2,
-    iconClass: 'text-[#d94e7c]',
-    href: '#projeto',
   },
 ]
 
@@ -84,14 +83,14 @@ export default function Page() {
                   <img
                     src={iconSrc}
                     alt={iconAlt}
-                    className="h-6 w-6 object-contain"
+                    className={`object-contain ${iconAlt === 'Localização' ? 'h-9 w-9' : iconAlt === 'Avaliação' ? 'h-8 w-8' : 'h-7 w-7'}`}
                   />
                 ) : Icon ? (
                   <Icon
                     aria-hidden="true"
-                    className={`${iconClass} ${Icon === Star ? 'fill-current' : Icon === MapPinned ? 'fill-current/15' : ''}`}
-                    size={26}
-                    strokeWidth={Icon === Star ? 1.8 : 2.1}
+                    className={iconClass}
+                    size={25}
+                    strokeWidth={1.8}
                   />
                 ) : null}
               </span>
