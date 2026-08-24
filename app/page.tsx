@@ -102,7 +102,7 @@ export default function Page() {
             href="https://instagram.com/trafixassessoria"
             target="_blank"
             rel="noreferrer"
-            className="text-[#c5ad58] transition-colors hover:text-[#e0c66f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5ad58]"
+            className="text-[#aaa681] transition-colors hover:text-[#c5ad58] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#aaa681]"
           >
             Desenvolvido por Trafix Assessoria
           </a>
