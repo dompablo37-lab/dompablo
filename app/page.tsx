@@ -97,7 +97,7 @@ export default function Page() {
           ))}
         </nav>
 
-        <footer className="mt-12 flex flex-col items-center gap-2 pb-4 text-[10px] font-medium uppercase tracking-[0.18em] text-[#817d59]">
+        <footer className="mt-24 flex flex-col items-center gap-2 pb-4 text-[10px] font-medium uppercase tracking-[0.18em] text-[#817d59]">
           <p>Desenvolvido por Trafix Assessoria</p>
           <p className="text-[9px] tracking-[0.12em] text-[#aaa681]">
             © 2026 DOM Pablo Barbearia. Todos os direitos reservados.
