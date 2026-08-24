@@ -77,7 +77,7 @@ export default function Page() {
             <a
               key={label}
               href={href}
-              className="group mx-auto flex min-h-[58px] w-full max-w-[360px] items-center justify-center gap-3 rounded-[17px] border border-white/80 bg-white/90 px-5 text-center text-[14px] font-bold text-[#191919] shadow-[0_4px_8px_rgba(90,89,57,0.16)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_7px_14px_rgba(90,89,57,0.2)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#36362d]"
+              className="group mx-auto flex min-h-[62px] w-full max-w-[360px] items-center justify-center gap-3 rounded-2xl border border-white/80 bg-white/95 px-6 text-center text-[13px] font-semibold uppercase tracking-[0.08em] text-[#191919] shadow-[0_8px_18px_rgba(61,59,39,0.16),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_12px_24px_rgba(61,59,39,0.22),inset_0_1px_0_rgba(255,255,255,1)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#36362d]"
             >
               <span className="flex h-7 w-7 shrink-0 items-center justify-center">
                 {iconSrc ? (
@@ -101,7 +101,7 @@ export default function Page() {
         </nav>
 
         <p className="mt-8 text-[10px] font-medium uppercase tracking-[0.18em] text-[#817d59]">
-          Personalize este espaço com a sua marca
+          Desenvolvido por Trafix Assessoria
         </p>
       </div>
     </main>
