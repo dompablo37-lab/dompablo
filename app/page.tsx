@@ -1,7 +1,5 @@
 'use client'
 
-import { Link2 } from 'lucide-react'
-
 const links = [
   {
     label: 'Agendar meu horário',
@@ -11,8 +9,8 @@ const links = [
   },
   {
     label: "Dom's Club",
-    icon: Link2,
-    iconClass: 'text-[#36362d]',
+    iconSrc: '/images/wpp.png',
+    iconAlt: 'WhatsApp',
     href: '#doms-club',
   },
   {
