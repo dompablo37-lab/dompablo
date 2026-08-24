@@ -74,7 +74,7 @@ export default function Page() {
             <a
               key={label}
               href={href}
-              className="group mx-auto flex min-h-[66px] w-full max-w-[360px] items-center justify-center gap-3 rounded-xl bg-[#d1d1cd]/95 px-6 text-center text-[12px] font-medium uppercase tracking-[0.16em] text-[#242522] shadow-[0_10px_24px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.62)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#deded9] hover:tracking-[0.18em] hover:shadow-[0_14px_30px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d7c98a]"
+              className="group mx-auto flex min-h-[56px] w-full max-w-[360px] items-center justify-center gap-3 rounded-xl bg-[#d1d1cd]/95 px-6 text-center text-[12px] font-medium uppercase tracking-[0.16em] text-[#242522] shadow-[0_10px_24px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.62)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#deded9] hover:tracking-[0.18em] hover:shadow-[0_14px_30px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d7c98a]"
             >
               <span className="flex h-7 w-7 shrink-0 items-center justify-center">
                 {iconSrc ? (
