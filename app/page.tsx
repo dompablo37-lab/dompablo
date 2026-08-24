@@ -39,7 +39,7 @@ export default function Page() {
           />
         </div>
 
-        <h1 className="relative -top-5 -mt-12 whitespace-nowrap font-serif text-[clamp(1.1rem,7vw,1.75rem)] font-semibold uppercase tracking-[0.16em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.55)] sm:-top-7 sm:-mt-16 sm:tracking-[0.2em]">
+        <h1 className="relative -top-5 -mt-12 max-w-full px-2 text-balance font-serif text-[clamp(1rem,6.4vw,1.75rem)] font-semibold uppercase leading-tight tracking-[0.1em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.55)] sm:-top-7 sm:-mt-16 sm:px-0 sm:whitespace-nowrap sm:tracking-[0.2em]">
           DOM Pablo Barbearia
         </h1>
         <div className="mt-4 flex items-center gap-4 text-[#36362d]">
