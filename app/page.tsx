@@ -97,7 +97,7 @@ export default function Page() {
           ))}
         </nav>
 
-        <footer className="mt-24 flex w-full max-w-full items-center justify-center gap-3 whitespace-nowrap pb-4 text-[8px] font-medium uppercase tracking-[0.08em] text-[#817d59] sm:gap-4 sm:text-[10px] sm:tracking-[0.18em]">
+        <footer className="mt-24 flex w-full max-w-full flex-col items-center justify-center gap-2 pb-4 text-center text-[8px] font-medium uppercase tracking-[0.08em] text-[#817d59] sm:flex-row sm:gap-4 sm:whitespace-nowrap sm:text-[10px] sm:tracking-[0.18em]">
           <a
             href="https://instagram.com/trafixassessoria"
             target="_blank"
