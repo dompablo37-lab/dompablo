@@ -29,7 +29,7 @@ const links = [
 
 export default function Page() {
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 py-8 sm:px-5 sm:py-10">
+    <main className="relative flex min-h-[115vh] items-center justify-center overflow-hidden px-4 py-12 sm:px-5 sm:py-16">
       <div className="relative z-10 flex w-full max-w-[420px] flex-col items-center text-center">
         <div className="mb-0 flex aspect-square w-[min(82vw,320px)] items-center justify-center overflow-hidden rounded-full">
           <img
@@ -97,9 +97,12 @@ export default function Page() {
           ))}
         </nav>
 
-        <p className="mt-8 text-[10px] font-medium uppercase tracking-[0.18em] text-[#817d59]">
-          Desenvolvido por Trafix Assessoria
-        </p>
+        <footer className="mt-12 flex flex-col items-center gap-2 pb-4 text-[10px] font-medium uppercase tracking-[0.18em] text-[#817d59]">
+          <p>Desenvolvido por Trafix Assessoria</p>
+          <p className="text-[9px] tracking-[0.12em] text-[#aaa681]">
+            © 2026 DOM Pablo Barbearia. Todos os direitos reservados.
+          </p>
+        </footer>
       </div>
     </main>
   )
