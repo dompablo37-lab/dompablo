@@ -29,7 +29,7 @@ const links = [
 
 export default function Page() {
   return (
-    <main className="relative flex min-h-[125vh] items-center justify-center overflow-hidden px-4 py-16 sm:px-5 sm:py-24">
+    <main className="relative flex min-h-screen items-center justify-center overflow-x-hidden px-4 py-12 sm:px-5 sm:py-16">
       <div className="relative z-10 flex w-full max-w-[420px] -translate-y-12 flex-col items-center text-center sm:translate-y-0">
         <div className="relative -top-5 flex aspect-square w-[min(82vw,320px)] items-center justify-center overflow-hidden rounded-full sm:-top-7">
           <img
