@@ -50,3 +50,11 @@ main {
   background-attachment: scroll;
   will-change: auto;
 }
+
+@media (max-width: 639px) {
+  main {
+    background-image:
+      linear-gradient(rgba(9, 10, 10, 0.32), rgba(9, 10, 10, 0.32)),
+      url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/C3164T01-zZSdSAAHBBmkIGgwuse13FVr1VwGAa.png');
+  }
+}
