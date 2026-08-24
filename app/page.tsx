@@ -79,15 +79,20 @@ export default function Page() {
               href={href}
               className="group mx-auto flex min-h-[58px] w-full max-w-[360px] items-center justify-center gap-3 rounded-[17px] border border-white/80 bg-white/90 px-5 text-center text-[14px] font-bold text-[#191919] shadow-[0_4px_8px_rgba(90,89,57,0.16)] backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_7px_14px_rgba(90,89,57,0.2)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#36362d]"
             >
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center">
+              <span className="flex h-7 w-7 shrink-0 items-center justify-center">
                 {iconSrc ? (
-                  <img src={iconSrc} alt={iconAlt} className="h-6 w-6 object-contain" />
+                  <img
+                    src={iconSrc}
+                    alt={iconAlt}
+                    className="h-6 w-6 object-contain"
+                  />
                 ) : Icon ? (
                   <Icon
-                      className={`${iconClass} ${Icon === Star ? 'fill-current' : Icon === MapPin ? 'fill-current/20' : ''}`}
-                      size={25}
-                      strokeWidth={Icon === Star ? 2 : 2.4}
-                    />
+                    aria-hidden="true"
+                    className={`${iconClass} ${Icon === Star ? 'fill-current' : Icon === MapPin ? 'fill-current/15' : ''}`}
+                    size={26}
+                    strokeWidth={Icon === Star ? 1.8 : 2.1}
+                  />
                 ) : null}
               </span>
               <span>{label}</span>
