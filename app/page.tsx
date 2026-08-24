@@ -106,7 +106,7 @@ export default function Page() {
           >
             Desenvolvido por Trafix Assessoria
           </a>
-          <p className="text-[7px] tracking-[0.05em] text-[#aaa681] sm:text-[9px] sm:tracking-[0.12em]">
+          <p className="text-[8px] tracking-[0.05em] text-[#aaa681] sm:text-[9px] sm:tracking-[0.12em]">
             © 2026 DOM Pablo Barbearia. Todos os direitos reservados.
           </p>
         </footer>
