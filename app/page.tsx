@@ -1,23 +1,23 @@
 'use client'
 
-import { Link2, MapPin, Star } from 'lucide-react'
+import { Link2, MapPinned, Star } from 'lucide-react'
 
 const links = [
   {
-    label: 'Agendar consulta de avaliação',
+    label: 'Agende sua avaliação',
     iconSrc: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/whatsapp/default.svg',
     iconAlt: 'WhatsApp',
     iconClass: 'text-[#21c98a]',
     href: '#agendamento',
   },
   {
-    label: 'Como chegar aqui',
-    icon: MapPin,
+    label: 'Encontre a barbearia',
+    icon: MapPinned,
     iconClass: 'text-[#ed4545]',
     href: '#localizacao',
   },
   {
-    label: 'Avaliação no Google',
+    label: 'Avalie sua experiência',
     icon: Star,
     iconClass: 'text-[#e5a528]',
     href: '#avaliacoes',
@@ -77,7 +77,7 @@ export default function Page() {
             <a
               key={label}
               href={href}
-              className="group mx-auto flex min-h-[62px] w-full max-w-[360px] items-center justify-center gap-3 rounded-2xl border border-white/80 bg-white/95 px-6 text-center text-[13px] font-semibold uppercase tracking-[0.08em] text-[#191919] shadow-[0_8px_18px_rgba(61,59,39,0.16),inset_0_1px_0_rgba(255,255,255,0.9)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_12px_24px_rgba(61,59,39,0.22),inset_0_1px_0_rgba(255,255,255,1)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#36362d]"
+              className="group mx-auto flex min-h-[62px] w-full max-w-[360px] items-center justify-center gap-3 rounded-2xl border border-white/70 bg-white/95 px-6 text-center text-[12px] font-medium uppercase tracking-[0.14em] text-[#191919] shadow-[0_8px_18px_rgba(61,59,39,0.14),inset_0_1px_0_rgba(255,255,255,0.95)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:tracking-[0.16em] hover:shadow-[0_12px_24px_rgba(61,59,39,0.2),inset_0_1px_0_rgba(255,255,255,1)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#36362d]"
             >
               <span className="flex h-7 w-7 shrink-0 items-center justify-center">
                 {iconSrc ? (
@@ -89,7 +89,7 @@ export default function Page() {
                 ) : Icon ? (
                   <Icon
                     aria-hidden="true"
-                    className={`${iconClass} ${Icon === Star ? 'fill-current' : Icon === MapPin ? 'fill-current/15' : ''}`}
+                    className={`${iconClass} ${Icon === Star ? 'fill-current' : Icon === MapPinned ? 'fill-current/15' : ''}`}
                     size={26}
                     strokeWidth={Icon === Star ? 1.8 : 2.1}
                   />
