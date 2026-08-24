@@ -98,7 +98,14 @@ export default function Page() {
         </nav>
 
         <footer className="mt-24 flex flex-col items-center gap-2 pb-4 text-[10px] font-medium uppercase tracking-[0.18em] text-[#817d59]">
-          <p>Desenvolvido por Trafix Assessoria</p>
+          <a
+            href="https://instagram.com/trafixassessoria"
+            target="_blank"
+            rel="noreferrer"
+            className="text-[#c5ad58] transition-colors hover:text-[#e0c66f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5ad58]"
+          >
+            Desenvolvido por Trafix Assessoria
+          </a>
           <p className="text-[9px] tracking-[0.12em] text-[#aaa681]">
             © 2026 DOM Pablo Barbearia. Todos os direitos reservados.
           </p>
