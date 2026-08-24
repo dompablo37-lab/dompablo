@@ -37,13 +37,13 @@ export default function Page() {
         <div className="mb-0 flex aspect-square w-[min(82vw,320px)] items-center justify-center overflow-hidden rounded-full">
           <img
             src="/dom-pablo-logo.png"
-            alt="Logotipo Dom Pablo Barberia"
+            alt="Logotipo Don Pablo Barbearia"
             className="h-full w-full object-contain mix-blend-screen"
           />
         </div>
 
-        <h1 className="-mt-12 whitespace-nowrap font-serif text-[clamp(1rem,7vw,1.625rem)] font-black uppercase tracking-[0.08em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.5)] sm:-mt-16 sm:tracking-[0.1em]">
-          Dom Pabllo Barbearia
+        <h1 className="-mt-12 whitespace-nowrap font-serif text-[clamp(1.1rem,7vw,1.75rem)] font-semibold uppercase tracking-[0.16em] text-white drop-shadow-[0_2px_3px_rgba(0,0,0,0.55)] sm:-mt-16 sm:tracking-[0.2em]">
+          Don Pablo Barbearia
         </h1>
         <div className="mt-4 flex items-center gap-4 text-[#36362d]">
           <a

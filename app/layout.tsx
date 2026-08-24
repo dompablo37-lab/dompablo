@@ -1,6 +1,13 @@
 import { Analytics } from '@vercel/analytics/next'
+import { Cormorant_Garamond } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Seu nome | Links principais',
@@ -30,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className="bg-background">
-      <body className="antialiased">
+      <body className={`${cormorantGaramond.variable} antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
