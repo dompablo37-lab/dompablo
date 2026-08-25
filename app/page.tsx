@@ -23,7 +23,7 @@ const links = [
     label: 'Localização Dom Pablo',
     iconSrc: '/images/loc.png',
     iconAlt: 'Localização',
-    href: '#localizacao',
+    href: 'https://www.google.com/maps/search/?api=1&query=Dom+Pablo+Barbearia%2C+Rua+Mestre+Teodoro+Louren%C3%A7o+da+Costa%2C+85%2C+Cuiab%C3%A1%2C+MT&utm_source=chatgpt.com',
   },
   {
     label: 'Avalie sua Experiência',
