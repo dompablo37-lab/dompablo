@@ -50,7 +50,9 @@ export default function Page() {
         </h1>
         <div className="mt-0 flex items-center gap-4 text-[#36362d] sm:mt-4">
           <a
-            href="#facebook"
+            href="https://facebook.com/DomPabloBarbearia"
+            target="_blank"
+            rel="noreferrer"
             aria-label="Facebook"
             className="inline-flex rounded-full p-1.5 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
           >
