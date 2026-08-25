@@ -1,5 +1,11 @@
 'use client'
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void
+  }
+}
+
 const links = [
   {
     label: 'Agendar meu horário',
@@ -84,6 +90,7 @@ export default function Page() {
             <a
               key={label}
               href={href}
+              onClick={() => window.fbq?.('track', 'Lead', { content_name: label })}
               className="group mx-auto flex min-h-[50px] w-full max-w-[360px] items-center justify-center gap-3 rounded-xl bg-[#bfc0bc]/95 px-6 text-center text-[12px] font-medium uppercase tracking-[0.16em] text-[#242522] shadow-[0_8px_20px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.45)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#c8c9c5] hover:tracking-[0.18em] hover:shadow-[0_12px_26px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.58)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d7c98a] sm:min-h-[56px]"
             >
               <span className="flex h-7 w-7 shrink-0 items-center justify-center">
