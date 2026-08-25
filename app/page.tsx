@@ -11,7 +11,7 @@ const links = [
     label: 'Combo VIP',
     iconSrc: '/images/wpp.png',
     iconAlt: 'WhatsApp',
-    href: '#combo-vip',
+    href: 'https://wa.me/556593331949?text=Oi%2C+quero+conhecer+os+combos+VIP+da+Dom+Pablo.&utm_source=chatgpt.com',
   },
   {
     label: 'Dom Conecta',
