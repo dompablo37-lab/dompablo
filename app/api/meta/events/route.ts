@@ -10,6 +10,10 @@ const EVENT_NAMES = new Set([
 
 const META_GRAPH_VERSION = 'v23.0'
 
+// Código temporário para a aba “Eventos de teste” do Gerenciador de Eventos.
+// Remova ou deixe vazio quando terminar os testes para voltar ao envio normal.
+const META_TEST_EVENT_CODE = 'TEST21953'
+
 function cleanValue(value: unknown, maxLength = 500) {
   return typeof value === 'string' ? value.slice(0, maxLength) : undefined
 }
@@ -63,6 +67,7 @@ export async function POST(request: NextRequest) {
           user_data: userData,
           custom_data: customData,
         }],
+        ...(META_TEST_EVENT_CODE ? { test_event_code: META_TEST_EVENT_CODE } : {}),
         access_token: accessToken,
       }),
     })
