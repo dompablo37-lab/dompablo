@@ -8,7 +8,7 @@ const links = [
     href: '#agendamento',
   },
   {
-    label: "Dom's Club",
+    label: 'ComboVip',
     iconSrc: '/images/wpp.png',
     iconAlt: 'WhatsApp',
     href: '#doms-club',
