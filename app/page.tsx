@@ -17,7 +17,7 @@ const links = [
     label: 'Dom Conecta',
     iconSrc: '/images/wpp.png',
     iconAlt: 'WhatsApp',
-    href: '#dom-conecta',
+    href: 'https://wa.me/556593331949?text=Oi%2C+tenho+interesse+no+Dom+Conecta%2C+pode+me+passar+mais+informa%C3%A7%C3%B5es%3F&utm_source=chatgpt.com',
   },
   {
     label: 'Localização Dom Pablo',
