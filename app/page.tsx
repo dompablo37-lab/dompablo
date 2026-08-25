@@ -8,10 +8,16 @@ const links = [
     href: '#agendamento',
   },
   {
-    label: 'ComboVip',
+    label: 'Combo VIP',
     iconSrc: '/images/wpp.png',
     iconAlt: 'WhatsApp',
-    href: '#doms-club',
+    href: '#combo-vip',
+  },
+  {
+    label: 'Dom Conecta',
+    iconSrc: '/images/wpp.png',
+    iconAlt: 'WhatsApp',
+    href: '#dom-conecta',
   },
   {
     label: 'Localização Dom Pablo',
@@ -56,7 +62,9 @@ export default function Page() {
             />
           </a>
           <a
-            href="#instagram"
+            href="https://instagram.com/dompablobarbeariaoficial"
+            target="_blank"
+            rel="noreferrer"
             aria-label="Instagram"
             className="inline-flex rounded-full p-1.5 transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#36362d]"
           >
