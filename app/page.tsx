@@ -5,7 +5,7 @@ const links = [
     label: 'Agendar meu horário',
     iconSrc: '/images/wpp.png',
     iconAlt: 'WhatsApp',
-    href: '#agendamento',
+    href: 'https://wa.me/556593331949?text=Oi%2C+quero+agendar+um+hor%C3%A1rio+na+Dom+Pablo.&utm_source=chatgpt.com',
   },
   {
     label: 'Combo VIP',
