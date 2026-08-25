@@ -57,4 +57,17 @@ main {
       linear-gradient(rgba(9, 10, 10, 0.32), rgba(9, 10, 10, 0.32)),
       url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/C3164T01-zZSdSAAHBBmkIGgwuse13FVr1VwGAa.png');
   }
+
+  html,
+  body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
