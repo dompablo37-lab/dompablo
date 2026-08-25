@@ -1,10 +1,12 @@
 'use client'
 
-declare global {
-  interface Window {
-    fbq?: (...args: unknown[]) => void
-  }
-}
+import { useEffect, useRef } from 'react'
+import {
+  getMetaClickEvent,
+  getMetaEventData,
+  trackMetaEvent,
+  trackMetaPageView,
+} from '@/lib/meta-tracking'
 
 const links = [
   {
@@ -40,6 +42,19 @@ const links = [
 ]
 
 export default function Page() {
+  const trackingSent = useRef(false)
+
+  useEffect(() => {
+    if (trackingSent.current) return
+    trackingSent.current = true
+
+    trackMetaPageView()
+    trackMetaEvent({
+      eventName: 'ViewContent',
+      eventData: { content_name: 'Página de links Dom Pablo' },
+    })
+  }, [])
+
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-x-hidden px-4 py-12 sm:px-5 sm:py-16">
       <div className="relative z-10 flex w-full max-w-[420px] -translate-y-12 flex-col items-center text-center sm:translate-y-0">
@@ -86,28 +101,24 @@ export default function Page() {
         </div>
 
         <nav aria-label="Links principais" className="mt-8 flex w-full flex-col gap-4">
-          {links.map(({ label, icon: Icon, iconSrc, iconAlt, iconClass, href }) => (
+          {links.map(({ label, iconSrc, iconAlt, href }) => (
             <a
               key={label}
               href={href}
-              onClick={() => window.fbq?.('track', 'Lead', { content_name: label })}
+              onClick={() =>
+                trackMetaEvent({
+                  eventName: getMetaClickEvent(label),
+                  eventData: getMetaEventData(label, href),
+                })
+              }
               className="group mx-auto flex min-h-[50px] w-full max-w-[360px] items-center justify-center gap-3 rounded-xl bg-[#bfc0bc]/95 px-6 text-center text-[12px] font-medium uppercase tracking-[0.16em] text-[#242522] shadow-[0_8px_20px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.45)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#c8c9c5] hover:tracking-[0.18em] hover:shadow-[0_12px_26px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.58)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d7c98a] sm:min-h-[56px]"
             >
               <span className="flex h-7 w-7 shrink-0 items-center justify-center">
-                {iconSrc ? (
-                  <img
-                    src={iconSrc}
-                    alt={iconAlt}
-                    className={`object-contain ${iconAlt === 'Localização' ? 'h-9 w-9' : iconAlt === 'Avaliação' ? 'h-8 w-8' : 'h-7 w-7'}`}
-                  />
-                ) : Icon ? (
-                  <Icon
-                    aria-hidden="true"
-                    className={iconClass}
-                    size={25}
-                    strokeWidth={1.8}
-                  />
-                ) : null}
+                <img
+                  src={iconSrc}
+                  alt={iconAlt}
+                  className={`object-contain ${iconAlt === 'Localização' ? 'h-9 w-9' : iconAlt === 'Avaliação' ? 'h-8 w-8' : 'h-7 w-7'}`}
+                />
               </span>
               <span>{label}</span>
             </a>
