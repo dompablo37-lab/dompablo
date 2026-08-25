@@ -29,7 +29,7 @@ const links = [
     label: 'Avalie sua Experiência',
     iconSrc: '/images/av.png',
     iconAlt: 'Avaliação',
-    href: '#avaliacoes',
+    href: 'https://search.google.com/local/writereview?placeid=ChIJi5zq4f6wnZMRktPYNnZr73M&utm_source=chatgpt.com',
   },
 ]
 
