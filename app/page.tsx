@@ -39,7 +39,7 @@ export default function Page() {
       <div className="relative z-10 flex w-full max-w-[420px] -translate-y-12 flex-col items-center text-center sm:translate-y-0">
         <div className="relative -top-5 flex aspect-square w-[min(82vw,320px)] items-center justify-center overflow-hidden rounded-full sm:-top-7">
           <img
-            src="/dom-pablo-logo.png"
+            src="/images/dom-pablo-logo.png"
             alt="Logotipo DOM Pablo Barbearia"
             className="h-full w-full object-contain mix-blend-screen"
           />
