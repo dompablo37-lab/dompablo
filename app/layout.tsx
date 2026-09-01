@@ -57,7 +57,7 @@ export default function RootLayout({
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
           gtag('js', new Date());
-          gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-P227CQ29HD'}', { send_page_view: false });`}
+          gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-P227CQ29HD'}', { send_page_view: false, transport_type: 'beacon' });`}
         </Script>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
