@@ -48,10 +48,15 @@ export function getGaEventName(label: string): string {
 /**
  * Envia o evento ao GA4 e só então navega para o destino.
  *
- * Links externos (WhatsApp, Maps, avaliação) descarregam a página na mesma aba;
- * sem esperar a confirmação do gtag, a requisição do evento é cancelada e nunca
- * chega ao Tempo Real. Usamos `transport_type: 'beacon'` + `event_callback`
- * para garantir o envio, com um fallback por tempo caso o callback não dispare.
+ * Links externos (WhatsApp, Maps, avaliação) descarregam a página na mesma aba.
+ * O GA4 (gtag.js) despacha o hit como uma requisição comum que é cancelada no
+ * unload, então precisamos adiar a navegação até o hit sair. Usamos o par
+ * oficial do gtag para isso: `event_callback` (chamado assim que o hit é
+ * despachado) e `event_timeout` (aciona o callback mesmo se a rede travar).
+ *
+ * IMPORTANTE: não usamos um `setTimeout` curto próprio para navegar, porque em
+ * conexões móveis lentas ele dispararia ANTES do gtag despachar o hit,
+ * cancelando o envio — foi o que impedia os eventos de chegarem ao Tempo Real.
  */
 export function trackGoogleEventAndNavigate(
   eventName: string,
@@ -62,7 +67,7 @@ export function trackGoogleEventAndNavigate(
     window.location.href = href
   }
 
-  if (typeof window === 'undefined' || !window.gtag) {
+  if (typeof window === 'undefined' || typeof window.gtag !== 'function') {
     navigate()
     return
   }
@@ -77,10 +82,14 @@ export function trackGoogleEventAndNavigate(
   window.gtag('event', eventName, {
     ...params,
     page_location: window.location.href,
-    transport_type: 'beacon',
+    // Chamado assim que o hit é despachado; navega já em seguida.
     event_callback: navigateOnce,
+    // Backstop coordenado pelo gtag: garante a navegação mesmo se o callback
+    // não vier (ex.: GA bloqueado), sem cortar o envio prematuramente.
+    event_timeout: 1000,
   })
 
-  // Fallback: se o callback não disparar (bloqueio/latência), navega mesmo assim.
-  window.setTimeout(navigateOnce, 500)
+  // Backstop final, só para o caso improvável de o gtag não honrar nenhum dos
+  // dois acima (mantém a UX: o link sempre abre).
+  window.setTimeout(navigateOnce, 1200)
 }
