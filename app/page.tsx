@@ -28,10 +28,10 @@ const links = [
     href: 'https://wa.me/556593331949?text=Oi%2C+tenho+interesse+no+Dom+Conecta%2C+pode+me+passar+mais+informa%C3%A7%C3%B5es%3F&utm_source=chatgpt.com',
   },
   {
-    label: 'Faça parte da equipe Dom Pablo',
+    label: 'Faça parte do time',
     iconSrc: '/images/wpp.png',
     iconAlt: 'WhatsApp',
-    href: 'https://wa.me/556593331949?text=Oi%2C+tenho+interesse+em+fazer+parte+da+equipe+Dom+Pablo.+Pode+me+passar+mais+informa%C3%A7%C3%B5es%3F&utm_source=chatgpt.com',
+    href: 'https://wa.me/556593331949?text=Oi%2C+quero+fazer+parte+da+equipe+Dom+Pablo.+Como+funciona%3F&utm_source=chatgpt.com',
   },
   {
     label: 'Localização Dom Pablo',
