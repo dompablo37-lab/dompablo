@@ -7,7 +7,11 @@ import {
   trackMetaEvent,
   trackMetaPageView,
 } from '@/lib/meta-tracking'
-import { trackGoogleEvent } from '@/lib/ga-tracking'
+import {
+  getGaEventName,
+  trackGoogleEvent,
+  trackGoogleEventAndNavigate,
+} from '@/lib/ga-tracking'
 
 const links = [
   {
@@ -116,15 +120,35 @@ export default function Page() {
             <a
               key={label}
               href={href}
-              onClick={() => {
-                trackGoogleEvent('click', {
+              onClick={(event) => {
+                const gaEventName = getGaEventName(label)
+                const gaParams = {
                   button_name: label,
                   button_destination: href,
-                })
+                  link_text: label,
+                  event_category: 'engagement',
+                }
+
                 trackMetaEvent({
                   eventName: getMetaClickEvent(label),
                   eventData: getMetaEventData(label, href),
                 })
+
+                // Preserva cliques com modificadores / botão do meio (nova aba).
+                if (
+                  event.metaKey ||
+                  event.ctrlKey ||
+                  event.shiftKey ||
+                  event.altKey ||
+                  event.button !== 0
+                ) {
+                  trackGoogleEvent(gaEventName, gaParams)
+                  return
+                }
+
+                // Adia a navegação até o evento ser enviado ao GA4.
+                event.preventDefault()
+                trackGoogleEventAndNavigate(gaEventName, gaParams, href)
               }}
               className="group mx-auto flex min-h-[50px] w-full max-w-[360px] items-center justify-center gap-3 rounded-xl bg-[#bfc0bc]/95 px-6 text-center text-[12px] font-medium uppercase tracking-[0.16em] text-[#242522] shadow-[0_8px_20px_rgba(0,0,0,0.22),inset_0_1px_0_rgba(255,255,255,0.45)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:bg-[#c8c9c5] hover:tracking-[0.18em] hover:shadow-[0_12px_26px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.58)] focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#d7c98a] sm:min-h-[56px]"
             >
